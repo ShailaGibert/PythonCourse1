@@ -97,6 +97,9 @@ print(lista)
 lista.reverse()
 print(lista)
 
+lista.clear()
+print(lista)
+
 """
 -------------- DICTIONARY --------------
 """
@@ -128,6 +131,8 @@ print(dic['c2'][1].upper())
 
 ##They are immutable : cannot change the value in it
 tuple = ('Shaila', 21, 'Gibert', 1.56)
+
+tuple_de_numeros = (2.2, -3, -4)
 
 #They can be casted
 tuple = list(tuple)
