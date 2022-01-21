@@ -158,7 +158,7 @@ print(ruta_prueba.parent.parent.parent)
 # Con Glob indicados los archivos existentes en un directorio
 ruta = Path(Path(os.getcwd()))
 print(ruta)
-for txt in Path(ruta).glob("**/*.txt"):  # Con ** indicamos que busque también dentro
+for txt in Path(ruta).glob("**/"):  # Con ** indicamos que busque también dentro
     # de los directorios dentro de la ruta
     print(txt)
 
