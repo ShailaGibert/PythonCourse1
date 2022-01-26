@@ -317,8 +317,7 @@ def eliminar_elemento(ruta):
     Función que elimina el archivo de texto o el directorio segun el tipo de ruta que se pasa como argumento
     """
     if Path(ruta).suffix == ".txt":
-        ruta = PureWindowsPath(ruta)
-        Path(ruta).rmdir()
+        os.remove(ruta)
         print(f"Se ha eliminado el archivo {Path(ruta).stem}")
     else:
         confirmacion = ""
@@ -326,7 +325,6 @@ def eliminar_elemento(ruta):
             confirmacion = input("Si elimina el directorio y existen archivos o carpetas en él, éstos también se "
                                  "eliminarán. ¿Desea continuar? [S/N]: ").upper()
             if confirmacion == "S":
-                ruta = PureWindowsPath(ruta)
                 shutil.rmtree(ruta)
                 print(f"Se ha eliminado correctamente el directorio {Path(ruta).stem}")
             elif confirmacion == "N":
